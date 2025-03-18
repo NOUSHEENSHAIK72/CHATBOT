@@ -1,0 +1,9 @@
+Hello! I'm your chatbot. Type 'bye' to end the conversation.
+You: hello
+Bot: Hello! How can I help you today?
+You: How are you?
+Bot: I'm just a bot, but I'm doing great! How about you?
+You: What is your name?
+Bot: I am a simple Python chatbot!
+You: bye
+Bot: Goodbye! Take care.

@@ -1,0 +1,41 @@
+# Simple chatbot in Python
+
+# Function to generate responses based on user input
+def get_response(user_input):
+    # Convert input to lowercase to handle case-insensitivity
+    user_input = user_input.lower().strip()  # Added strip to remove leading/trailing spaces
+
+    # Respond based on user input
+    if "hello" in user_input:
+        return "Hello! How can I help you today?"
+    elif "how are you" in user_input:
+        return "I'm just a bot, but I'm doing great! How about you?"
+    elif "your name" in user_input:
+        return "I am a simple Python chatbot!"
+    elif "bye" in user_input:
+        return "Goodbye! Have a great day!"
+    else:
+        return "Sorry, I didn't understand that. Can you ask something else?"
+
+# Main chatbot function
+def chat():
+    print("Hello! I'm your chatbot. Type 'bye' to end the conversation.")
+    
+    while True:
+        try:
+            user_input = input("You: ")
+            # Check if the user wants to quit
+            if "bye" in user_input.lower().strip():
+                print("Bot: Goodbye! Take care.")
+                break
+            
+            # Get response from the chatbot
+            response = get_response(user_input)
+            print("Bot:", response)
+        except Exception as e:
+            print(f"Bot: Oops! There was an error: {e}")
+            continue
+
+# Start the chatbot
+if __name__ == "__main__":
+    chat()
